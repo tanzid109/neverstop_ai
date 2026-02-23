@@ -25,8 +25,8 @@ export default function Navbar() {
     const pathname = usePathname()
 
     return (
-        <section className="sticky top-0 z-50 w-full bg-linear-to-t from-[#096e29] to-[#096e29]/90
-         text-white border-b-[0.1px] border-white/50">
+        <nav className="sticky top-0 z-50 w-full bg-linear-to-t from-[#096e29] to-[#096e29]/90
+         text-white border-b-[0.1px] border-white/50 backdrop-blur-2xl">
             <div className="w-11/12 mx-auto px-6 h-16 flex items-center justify-between">
 
                 {/* Logo */}
@@ -82,20 +82,30 @@ export default function Navbar() {
 
                         <SheetContent
                             side="right"
-                            className="bg-green-800 text-white border-none"
+                            className="bg-linear-to-t from-[#096e29] to-[#096e29]/90 text-white border-none"
                         >
                             <div className="flex flex-col gap-6 mt-10">
-                                {navItems.map((item) => (
-                                    <Link
-                                        key={item.name}
-                                        href={item.href}
-                                        className="text-lg font-medium hover:text-green-300 transition"
-                                    >
-                                        {item.name}
-                                    </Link>
-                                ))}
+                                {navItems.map((item) => {
+                                    const isActive = pathname === item.href
 
-                                <Button className="mt-6 bg-white text-black rounded-full">
+                                    return (
+                                        <Link
+                                            key={item.name}
+                                            href={item.href}
+                                            className={`relative text-base transition-all duration-300 inline-block
+                                                ${isActive ? "text-white text-lg font-semibold" : "hover:text-white"}
+                                                after:absolute after:left-0 after:-bottom-1 after:h-0.5
+                                                after:bg-linear-to-r after:from-[#13C6DD] after:to-[#6DDA8F]
+                                                after:transition-all after:duration-300
+                                                ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}
+                                            `}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    )
+                                })}
+
+                                <Button className="mt-6 bg-white text-black rounded-lg px-6 hover:bg-white/90">
                                     Book Demo
                                 </Button>
                             </div>
@@ -104,6 +114,6 @@ export default function Navbar() {
                 </div>
 
             </div>
-        </section>
+        </nav>
     )
 }

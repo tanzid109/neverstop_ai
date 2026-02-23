@@ -4,7 +4,7 @@ import StatCard from "../ui/statcard"
 
 export default function Hero() {
     return (
-        <section className="relative w-full bg-linear-to-b from-[#096f29] to-black text-white overflow-hidden border-b-[0.1px] border-white/50">
+        <section className="relative w-full bg-linear-to-b from-[#096f29] via-[#0A231B] to-black text-white overflow-hidden border-b-[0.1px] border-white/50">
             <div className="w-10/12 mx-auto px-6 py-20 lg:py-28">
 
                 {/* Badge */}
@@ -45,9 +45,9 @@ export default function Hero() {
 
                 {/* Stats Cards */}
                 <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <StatCard value="100K+" label="Calls Handled Monthly" />
-                    <StatCard value="95%" label="Customer Satisfaction" />
-                    <StatCard value="50+" label="Integrations Available" />
+                    <StatCard className="p-5" value="100K+" label="Calls Handled Monthly" />
+                    <StatCard className="p-5" value="95%" label="Customer Satisfaction" />
+                    <StatCard className="p-5" value="50+" label="Integrations Available" />
                 </div>
 
             </div>
