@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu } from "lucide-react"
+import { ChartNoAxesColumn } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
     Sheet,
@@ -25,9 +25,8 @@ export default function Navbar() {
     const pathname = usePathname()
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-linear-to-t from-[#096e29] to-[#096e29]/90
-         text-white border-b-[0.1px] border-white/50 backdrop-blur-2xl">
-            <div className="w-11/12 mx-auto px-6 h-16 flex items-center justify-between">
+        <nav className="fixed bg-transparent backdrop-blur-md border-gray-200 top-0 z-50 w-full text-white border-t-[0.5px]">
+            <div className="md:w-10/12 mx-auto px-6 h-16 flex items-center justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3">
@@ -61,22 +60,12 @@ export default function Navbar() {
                         )
                     })}
                 </nav>
-
-                {/* Right Section Desktop */}
-                <div className="hidden lg:flex items-center">
-                    <Button
-                        className="bg-white text-black rounded-lg px-6 hover:bg-white/90"
-                    >
-                        Book Demo
-                    </Button>
-                </div>
-
                 {/* Mobile Menu */}
                 <div className="lg:hidden">
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button variant="ghost" size="icon" className="text-white">
-                                <Menu />
+                                <ChartNoAxesColumn className="rotate-90" size={20} />
                             </Button>
                         </SheetTrigger>
 
@@ -104,10 +93,6 @@ export default function Navbar() {
                                         </Link>
                                     )
                                 })}
-
-                                <Button className="mt-6 bg-white text-black rounded-lg px-6 hover:bg-white/90">
-                                    Book Demo
-                                </Button>
                             </div>
                         </SheetContent>
                     </Sheet>
