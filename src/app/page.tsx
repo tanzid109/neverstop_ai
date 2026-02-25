@@ -1,13 +1,17 @@
+import BuildYourAutomationStack from '@/components/Home/BuildYourAutomationStack';
 import DirectConnections from '@/components/Home/DirectConnections';
 import Hero from '@/components/Home/Hero';
-import EverythingStack from '@/components/Home/Servicestack';
+import ImplementTimeline from '@/components/Home/ImplementTimeline';
+import ServieStack from '@/components/Home/Servicestack';
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <DirectConnections />
-      <EverythingStack/>
+      <ServieStack />
+      <BuildYourAutomationStack />
+      <ImplementTimeline />
     </div>
   );
 };

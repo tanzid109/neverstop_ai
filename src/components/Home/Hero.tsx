@@ -4,8 +4,8 @@ import StatCard from "../ui/statcard"
 
 export default function Hero() {
     return (
-        <section className="relative w-full bg-linear-to-b from-[#096f29] via-[#0A231B] to-black text-white overflow-hidden border-b-[0.1px] border-white/50">
-            <div className="w-10/12 mx-auto px-6 py-20 lg:py-28">
+        <section className="relative pt-24 w-full bg-linear-to-b from-[#096f29] via-[#0A231B] to-black text-white overflow-hidden">
+            <div className="w-10/12 mx-auto px-6 ">
 
                 {/* Badge */}
                 <div className="inline-block mb-6">
@@ -35,10 +35,10 @@ export default function Hero() {
                     <Button className="rounded-xl px-6 bg-linear-to-r from-[#13C6DD] to-[#6DDA8F] text-black hover:opacity-90 transition">
                         Book Demo
                     </Button>
-                    <Button variant="destructive">
+                    <Button variant="destructive" className="px-6">
                         Try AI
                     </Button>
-                    <Button variant="destructive">
+                    <Button variant="destructive" className="px-6">
                         Models & Pricing
                     </Button>
                 </div>

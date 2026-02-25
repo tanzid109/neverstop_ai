@@ -36,7 +36,7 @@ export default function EverythingStack() {
     ]
 
     return (
-        <section className="w-full bg-black text-white py-24 px-6 border-b-[0.1px] border-white/50">
+        <section className="w-full bg-black text-white py-10 px-6">
             <div className="w-10/12 mx-auto">
 
                 {/* Heading */}
@@ -59,28 +59,29 @@ export default function EverythingStack() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="p-6 rounded-2xl border border-white/10 
-              bg-linear-to-br from-[#0B2F24] via-[#0A231B] to-[#071A14] 
-              hover:border-[#6DDA8F]/40 transition duration-300"
+                            className="relative p-6 flex flex-col justify-evenly rounded-2xl border border-white/10 bg-linear-to-br from-[#010201] via-[#0A231B] to-[#071A14] hover:border-[#6DDA8F]/40 transition duration-300 overflow-hidden"
                         >
+                            {/* Soft Glow */}
+                            <div className="absolute -top-20 -right-20 h-60 w-60 bg-[#3f7d52]/70 blur-3xl rounded-full" />
+                            <div className="absolute bottom-0 left-0 h-40 w-40 bg-[#3f7d52]/80 blur-3xl rounded-full" />
                             {/* Title */}
                             <div className="flex items-start gap-2 mb-4">
                                 <span className="mt-2 h-2 w-2 rounded-full bg-[#6DDA8F]" />
-                                <h3 className="text-lg font-semibold text-white">
+                                <h3 className="text-2xl font-semibold text-white">
                                     {feature.title}
                                 </h3>
                             </div>
 
                             {/* Description */}
-                            <p className="text-white/70 text-sm leading-relaxed mb-6">
+                            <p className="text-white text-base leading-relaxed mb-6">
                                 {feature.description}
                             </p>
 
                             {/* Divider */}
-                            <div className="h-px bg-white/10 mb-6" />
+                            <div className="h-px bg-white/30 mb-6" />
 
                             {/* Feature List */}
-                            <ul className="space-y-2 text-sm text-white/70">
+                            <ul className="space-y-1 text-base text-white">
                                 {feature.items.map((item, i) => (
                                     <li key={i} className="flex items-center gap-2">
                                         <span className="h-1.5 w-1.5 rounded-full bg-[#6DDA8F]" />
@@ -91,7 +92,6 @@ export default function EverythingStack() {
                         </div>
                     ))}
                 </div>
-
             </div>
         </section>
     )
