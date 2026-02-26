@@ -139,7 +139,7 @@ const FAQPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Left Column */}
                     <div>
-                        <Accordion type="single" collapsible defaultValue="item-1">
+                        <Accordion type="single" collapsible defaultValue="">
                             {faqItems.slice(0, 11).map((item) => (
                                 <AccordionItem key={item.id} value={item.id} className="mb-4">
                                     <AccordionTrigger className="text-left hover:text-green-400 transition-colors py-4">
@@ -155,7 +155,7 @@ const FAQPage = () => {
 
                     {/* Right Column */}
                     <div>
-                        <Accordion type="single" collapsible defaultValue="item-12">
+                        <Accordion type="single" collapsible defaultValue="">
                             {faqItems.slice(11).map((item) => (
                                 <AccordionItem key={item.id} value={item.id} className="mb-4">
                                     <AccordionTrigger className="text-left hover:text-green-400 transition-colors py-4">
