@@ -15,10 +15,10 @@ const navItems = [
     { name: "Home", href: "/" },
     { name: "Solutions", href: "/solutions" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Models", href: "/models" },
-    { name: "Playground", href: "/playground" },
+    { name: "Systems", href: "/systems" },
+    { name: "Test Drive", href: "/test_drive" },
     { name: "Demo", href: "/demo" },
-    { name: "Compare", href: "/compare" },
+    { name: "Competition", href: "/competition" },
 ]
 
 export default function Navbar() {
@@ -64,7 +64,7 @@ export default function Navbar() {
                 <div className="lg:hidden">
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="text-white">
+                            <Button size="icon" className="text-white">
                                 <ChartNoAxesColumn className="rotate-90" size={20} />
                             </Button>
                         </SheetTrigger>
