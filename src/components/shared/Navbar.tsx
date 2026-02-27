@@ -16,7 +16,7 @@ const navItems = [
     { name: "Solutions", href: "/solutions" },
     { name: "Pricing", href: "/pricing" },
     { name: "Systems", href: "/systems" },
-    { name: "Test Drive", href: "/test_drive" },
+    { name: "Test Drive", href: "/test-drive" },
     { name: "Demo", href: "/demo" },
     { name: "Competition", href: "/competition" },
 ]
@@ -25,7 +25,7 @@ export default function Navbar() {
     const pathname = usePathname()
 
     return (
-        <nav className="fixed bg-transparent backdrop-blur-md border-gray-200 top-0 z-50 w-full text-white border-t-[0.5px]">
+        <nav className="fixed bg-transparent backdrop-blur-md top-0 z-50 w-full text-white border-t-2 border-[#6DDA8F]">
             <div className="md:w-10/12 mx-auto px-6 h-16 flex items-center justify-between">
 
                 {/* Logo */}

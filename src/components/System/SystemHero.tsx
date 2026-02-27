@@ -1,7 +1,7 @@
 
 export default function SystemHero() {
     return (
-        <section className="relative py-40 w-full bg-black text-white overflow-hidden">
+        <section className="relative py-10 md:py-40 w-full bg-black text-white overflow-hidden">
             <div className="z-10 absolute top-0 left-0 bg-linear-to-b from-[#096f29]/80 to-transparent w-full h-80 pointer-events-none"></div>
 
             <div className="relative text-center z-20 w-10/12 mx-auto px-6">
